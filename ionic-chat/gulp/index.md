@@ -20,7 +20,7 @@
 * merge-stream ：  顾名思义即可，[merge-stream](https://github.com/grncdr/merge-stream)
 * gulp-plumber ： Prevent pipe breaking caused by errors from gulp plugins(exit gracefully if something fails after this)
 * gulp-flatten ： remove or replace relative path for files
-* gulp-useref ： 可以把html里零碎的引入合并成一个文件，不负责代码压缩。[gulp-useref](https://www.npmjs.com/package/gulp-useref)
+* gulp-useref ： 可以把html里零碎的引入合并成一个文件，不负责代码压缩。[gulp-useref](https://www.npmjs.com/package/gulp-useref),3.0 相对 2.0 的 Api 有比较大得变化，注意排查`TypeError: useref.assets is not a function`
 * gulp-fliter : [gulp-filter](https://www.npmjs.com/package/gulp-filter)
 * gulp-csso : [gulp-csso](https://www.npmjs.com/package/gulp-csso)
 * gulp-uglify : 压缩
