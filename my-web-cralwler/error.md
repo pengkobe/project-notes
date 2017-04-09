@@ -25,5 +25,13 @@ github ISSUE:https://github.com/angular/material2/issues/2478
 ### 'md-input-container' is not a known element:
 github ISSUE:https://github.com/angular/material2/issues/2267
 
+### can't resolve "@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';"
+原因同下
+
+###  can not find module @angular/animations/browser
+原因是 angular material 升级了，自己又不小心，cnpm install 了，直接导致不能使用。
+参考官方文档: https://material.angular.io/guide/getting-started 
+
+
 ### koa2
 koa2 发生错误并不会停止运行，而是会什么都不做，有时候需要我手动添加 try catch 才能发现问题
