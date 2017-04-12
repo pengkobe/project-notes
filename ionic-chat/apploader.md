@@ -135,10 +135,17 @@ Failed to load resource: net::ERR_FILE_NOT_FOUND
 ```
 
 ### 结合 Angular1.x 使用
-特别需要注意的是，首次加载文件为异步加载，如果需要下载加载入口文件
+特别需要注意的是，首次加载文件为异步加载，如果需要下载入口文件,需要做以下几个操作
 1. 去掉 body 上的 ng-app="starter" 属性
 2. 手动指定入口 App ```angular.bootstrap(doucumnet.body,["starter"]);```
+   + 不要把该段 js 放到 head 中同步执行，body 未渲染，将发生报错。
 
+### 加载逻辑
+1. 首次默认从本地加载，但是会从服务器下载 manifest.json 文件与对应的文件
+2. 第二次加载时则使用缓存中的内容
+3. 当 manifest.json 文件发生改变，则更新相应文件
+   + 全局版本号改变，默认全部更新
+   + 文件版本号改变，更新对应文件
 
 ### 问题
 1. 和懒加载一起使用会发生问题！
