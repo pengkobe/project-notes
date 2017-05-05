@@ -18,6 +18,6 @@
 mongoRest
   - index， 路由集中生成
   - actions， Rest 操作处理
-  - 
+  - routes,路由
 
 ```
