@@ -23,8 +23,8 @@ src/
       + actionTypes action 常量
     - actions  根据 action 常量配置处理器
       + 具体的模块
-   - containers/ 页面容器
-   - components/ 组件
+   - containers/ 页面容器组件
+   - components/ UI组件
    - config/ 请求 API 配置
    - data/  基本的配置信息
    - util/ 包括对 fetch 与 promise 的封装
@@ -36,6 +36,14 @@ tools/
 1. 在 config 中添加 log 地址
 2. 在 constants 中添加 action 常量
 3. 在 action 中添加对应的处理器
+   + 使用 redux-promise，返回 Promise 对象
 4. 在 reducer 中添加对应的处理器
 5. 在 container 中添加容器
 6. 在 routes.js 中添加对应的路由映射
+
+
+
+## 附图
+![](http://www.ruanyifeng.com/blogimg/asset/2016/bg2016091802.jpg)
+
+
