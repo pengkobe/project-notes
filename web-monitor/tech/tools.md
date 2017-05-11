@@ -1,5 +1,12 @@
 ## TOOLS
 
+#### 构建模块
+* ora，用于设计各种 loading 效果 
+ ```javascript
+    const spinner = ora('building for production...');
+    spinner.start();
+```   
+
 #### srcServer
 *  webpack 启动入口，指定 api server 基地址( 在 cfetch 中使用)
 
