@@ -17,15 +17,16 @@
 * [tomato-server](https://github.com/tomatobang/tomato-server)
 
 ## FE Framework Related
-* [ionic-chat](https://github.com/pengkobe/ionic-chat)
-* [my-web-crawler](https://github.com/pengkobe/my-web-crawler)
-* [countdown](https://github.com/pengkobe/countdown)
-* [my-twitter-system](https://github.com/pengkobe/my-twitter-system)
-* [react-native-practice](https://github.com/pengkobe/react-native-practice)
-* [ionic2-chat](https://github.com/pengkobe/ionic2-chat)
-* [react-native-chat](https://github.com/pengkobe/react-native-chat)
+* [ionic-chat](https://github.com/pengkobe/ionic-chat), dev based on ionic(cordova) with angular1.x
+* [my-web-crawler](https://github.com/pengkobe/my-web-crawler), dev based on angular2 with material design
+* [countdown](https://github.com/pengkobe/countdown), dev based on express & ant-design with react
+* [my-twitter-system](https://github.com/pengkobe/my-twitter-system), dev based on vue2
+* [react-native-practice](https://github.com/pengkobe/react-native-practice), dev based on react-native for ios 
+* [ionic2-chat](https://github.com/pengkobe/ionic2-chat), dev based on ionic2(cordova) with angular2
+* [react-native-chat](https://github.com/pengkobe/react-native-chat), dev based on react-native for ios 
 * [web-monitor](https://github.com/pengkobe/web-monitor)
-* [tomato-web](https://github.com/tomatobang/tomato-web)
+* [tomato-web](https://github.com/tomatobang/tomato-web), dev based on koa2 & angular2  
+* [web-monitor](https://github.com/pengkobe/web-monitor), dev based on koa2 & ant-design with react
 
 
 ## Company Related
