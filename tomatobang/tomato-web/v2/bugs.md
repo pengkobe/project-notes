@@ -17,3 +17,8 @@ uglifyjs failed: SyntaxError: Unexpected token: name (check)
 "target": "es2015",
 "lib": ["es2017", "dom"]
 ```
+
+* "Runtime compiler is not loaded”,动态加载模块的方式需要区分 JIT 与 AOT 
+* Couldn't find preset "es2015" relative to directory "D:\\git\\tomato-web\\src",这个完全是自己乱整进去的，跟标准的写法不通
+  > ["@ngtools/webpack","babel-loader?presets[]=es2015"], ["babel-loader","@ngtools/webpack"]，["@ngtools/webpack","babel-loader"]:这样子则不支持 ts 语法。
+* 
