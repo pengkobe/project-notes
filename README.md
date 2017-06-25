@@ -3,10 +3,13 @@
 
 ## KEY DEV Project
 * [my-web-crawler](https://github.com/pengkobe/my-web-crawler)
+  > 此项目设计到的知识点主要是 angular2 与 koa2. 前端是基于脚手架angular2-webpack-starter 进行开发，webpack 的使用参考了 pinkyjie 的部分文章，对 webpack 的使用机型了基本了解，对 dev、prod、test 三个环境的搭建有了初步了解。最重要的是开启了使用 Typescript 开发的新篇章。
 * [web-monitor](https://github.com/pengkobe/web-monitor)
+  > 这个是基于 redux 的练手项目，增进对该架构的理解，并通过实践积累开发经验，项目只包括一个导航以及以表格为单位进行展示的页面，初步结合第三方框架进行了开发( echarts )，组件库基于 ant-design. 总的来说，使用 react+redux 开发体验也不错。
 * [my-twitter-system](https://github.com/pengkobe/my-twitter-system)
 
 #### tomatobang
+> 个人想着基于此面向全端进行开发。
 * [tomato-website](https://github.com/tomatobang/tomato-site)
 * [tomato-web](https://github.com/tomatobang/tomato-web)
 * [tomato-server](https://github.com/tomatobang/tomato-server)
