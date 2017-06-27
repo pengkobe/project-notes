@@ -43,16 +43,19 @@ Doc:https://webpack.github.io/docs/configuration.html
     * NormalModuleReplacementPlugin,匹配resourceRegExp，替换为newResource
     * ContextReplacementPlugin,替换上下文的插件
     * CommonsChunkPlugin,多个 html共用一个js文件(chunk)
-    * copy-webpack-plugin
-    * awesome-typescript-loader
+    * copy-webpack-plugin, 用于资源拷贝的插件
+    * awesome-typescript-loader,用于加速项目编译
       - ForkCheckerPlugin
-    * html-webpack-plugin
-    * LoaderOptionsPlugin
+      - 重要属性
+        + useBabel 
+        + useCache
+    * html-webpack-plugin,可以*自动创建 html* 并引用打包后的文件
+    * LoaderOptionsPlugin, SEE:https://gist.github.com/sokra/27b24881210b56bbaff7
     * script-ext-html-webpack-plugin,Enhances html-webpack-plugin functionality with async and defer attributes for script elements
 2. dev
     * NamedModulesPlugin  ( 暂时无用 )
     * LoaderOptionsPlugin ( Repeat )
-    * DefinePlugin
+    * DefinePlugin，使得你可以在编译时期创建全局变量
 3. prod
    * DedupePlugin，去重插件
    * DefinePlugin ( Repeat )
@@ -145,6 +148,35 @@ new webpack.optimize.CommonsChunkPlugin('vendor', isProd ? 'vendor.[hash].js' : 
 
 ### Demo
 个人有使用webpack结合vue开发了一个项目:[my-twitter-system](https://github.com/pengkobe/my-twitter-system) ,欢迎start。
+
+### 其它
+参考自: https://github.com/ruanyf/webpack-demos
+
+#### 分块加载
+```javascript
+// main.js
+require.ensure(['./a'], function(require) {
+  var content = require('./a');
+  document.open();
+  document.write('<h1>' + content + '</h1>');
+  document.close();
+});
+```
+以下方法可以达到同样效果
+```javascript
+// main.js
+
+// Now a.js is requested, it will be bundled into another file
+var load = require('bundle-loader!./a.js');
+
+// To wait until a.js is available (and get the exports)
+//  you need to async wait for it.
+load(function(file) {
+  document.open();
+  document.write('<h1>' + file + '</h1>');
+  document.close();
+});
+```
 
 ###  参考
 * http://pinkyjie.com/2016/03/05/webpack-tips/
