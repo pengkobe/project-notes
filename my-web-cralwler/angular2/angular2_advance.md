@@ -10,6 +10,10 @@ Query会解决开发者在 Angular 1 中面临的以下问题：
 ## useClass
 创建并返回一个指令类的新实例,使用该技术来为公共或默认类提供备选实现。该替代品能实现一个不同的策略，比如拓展默认类或者在测试的时候假冒真实类。
 
+## useExisting
+
+## forwardRef
+
 ## 数据流
 * ng2为单向数据流，速度快。
 * 组件树:angular2-dependencies-graph
