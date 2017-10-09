@@ -61,6 +61,12 @@
 
 
 ## Company Related
+#### [wechat-file-download-page](https://github.com/pengkobe/wechat-file-download-page)
+> 用于 PDF 预览与下载(仅适用于 微信 webview)，基于 es6-webpack-starter
+#### [ionic1.x-datetime-picker](https://github.com/pengkobe/wechat-file-download-page/ionic1.x-datetime-picker)
+> 插件改良，基于 proton.multi-list-picker
+#### [cordova-plugin-screen-locker](https://github.com/pengkobe/cordova-plugin-screen-locker)
+> 插件改良并重新发布至 npm 官网
 #### [NXT-Cordova-PushPlugin](https://github.com/pengkobe/NXT-Cordova-PushPlugin)
 > 破天荒发布到 npm 的一个组件,没想到社区关注度还是蛮高的,在这里,也第一次对 android 进行了系统的学习
 #### [EFOS-download-page](https://github.com/pengkobe/EFOS-download-page)
