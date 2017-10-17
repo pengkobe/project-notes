@@ -1,5 +1,5 @@
 ## 懒加载
-死活说找不到模块
+> 死活说找不到模块,这个问题害了我两次了！！！！！！
 按照 https://github.com/ionic-team/ionic/issues/10946 进行修改
 ```
 npm install @ionic/app-scripts@latest.
