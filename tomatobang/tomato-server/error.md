@@ -2,7 +2,18 @@
 其实服务端初始化不正确，说什么头没有设置其实是迷惑人的
 参考: https://stackoverflow.com/questions/35713682/socket-io-gives-cors-error-even-if-i-allowed-cors-it-on-server
 
-#### EXPRESS
+## EGG 
+按照[文档](https://eggjs.org/zh-cn/core/deployment.html)部署后，死活运行不成功，其中虽然有提示说
+`Db.prototype.authenticate method will...`,但是这个仅仅是警告而已，后来查到该[ISSUE](https://github.com/eggjs/egg/issues/1353),其中
+有说到，
+> 1. ssh 到服务器上，不用 daemon 启动，看看控制台输出是啥
+2. 确认下你的服务器的文档，是不是必须指定环境变量为启动端口，或者 workers 数量有限制 （譬如 leadcloud 和 sinaapp 就有限制，不确定你用的阿里云有没有）  
+
+试着将 daemon 参数去掉，结果运行成功！顺带说一下，--daemon 只是把日志重定向到文件而已，不输出到控制台。
+
+
+
+## EXPRESS
 ```javascript
 app.set('port', port);
 var server = http.createServer(app);
@@ -18,7 +29,7 @@ var socketIO = require('socket.io');
 var io = socketIO(server);
 ```
 
-#### KOA2
+## KOA2
 ```javascript
 let server=  app.listen(config.serverPort, () => {
     log.info(`Koa2 is running at ${config.serverPort}`);
