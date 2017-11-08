@@ -53,3 +53,83 @@ let server = require('http').Server(app.callback());
     require('./main')(io);
     return server;
 ```
+
+## egg-socket.io
+在 egg 提了一个 Issue，地址为 https://github.com/eggjs/egg/issues/1629 
+* **Node Version**:
+v7.9.0
+* **Egg Version**:
+v1.9.0
+* **Plugin Name**:
+egg-socket.io
+* **Plugin Version**:
+v3.0.0
+* **Platform**:
+windows 10 或者 centos7
+* **Mini Showcase Repository**:
+暂无
+
+报错堆栈信息如下
+```
+TypeError: Cannot set property 'args' of undefined (uncaughtException throw 1 times on pid:9992)
+    at Socket.socket.on.args (/mnt/myRepo/node_modules/egg-socket.io/lib/io.js:68:37)
+    at emitOne (events.js:101:20)
+    at Socket.emit (events.js:191:7)
+    at Socket.emit (/mnt/myRepo/node_modules/socket.io/lib/socket.js:140:10)
+    at Socket.onclose (/mnt/myRepo/node_modules/socket.io/lib/socket.js:452:8)
+    at Client.onclose (/mnt/myRepo/node_modules/socket.io/lib/client.js:233:24)
+    at emitTwo (events.js:111:20)
+    at Socket.emit (events.js:194:7)
+    at Socket.onClose (/mnt/myRepo/node_modules/engine.io/lib/socket.js:318:10)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at WebSocket.emit (events.js:188:7)
+    at WebSocket.Transport.onClose (/mnt/myRepo/node_modules/engine.io/lib/transport.js:127:8)
+    at WebSocket.internalOnClose (/mnt/myRepo/node_modules/uws/uws.js:199:17)
+    at process.nextTick (/mnt/myRepo/node_modules/uws/uws.js:445:27)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+```
+
+
+出现这个错误后，重启服务端后，客户端不刷新，一切正常;出现这个错误后，
+按 F5 刷新客户时会出现，根据堆栈初步判断是这里 `at Socket.socket.on.args (/mnt/myRepo/node_modules/egg-socket.io/lib/io.js:68:37)` 没有考虑到可能出现的所有情形？
+所以我稍微改动了点东西，将这段代码
+```javascript
+ if (nsp[RouterConfigSymbol]) {
+        for (const [ event, handler ] of nsp[RouterConfigSymbol].entries()) {
+          socket.on(event, (...args) => {
+            const ctx = args.splice(-1)[0];
+            ctx.args = ctx.req.args = args;
+            co.wrap(handler).call(ctx)
+              .then(() => ctx[CtxEventSymbol].emit('finshed'))
+              .catch(e => {
+                e.message = '[egg-socket.io] controller execute error: ' + e.message;
+                ctx[CtxEventSymbol].emit('finshed', e);
+              });
+          });
+        }
+      }
+```
+改为以下这样子，
+```javascript
+ if (nsp[RouterConfigSymbol]) {
+        for (const [ event, handler ] of nsp[RouterConfigSymbol].entries()) {
+          socket.on(event, (...args) => {
+            const ctx = args.splice(-1)[0];
+            // 这里是新增内容
+            if(!args || !ctx.req){
+              return;
+            }
+            ctx.args = ctx.req.args = args;
+            co.wrap(handler).call(ctx)
+              .then(() => ctx[CtxEventSymbol].emit('finshed'))
+              .catch(e => {
+                e.message = '[egg-socket.io] controller execute error: ' + e.message;
+                ctx[CtxEventSymbol].emit('finshed', e);
+              });
+          });
+        }
+      }
+```
+然后就没有再出现。
+

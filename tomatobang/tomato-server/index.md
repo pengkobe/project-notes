@@ -5,7 +5,11 @@
 * log4js
 * jwt
 * RESTful API
- 
+
+## 花边项目
+* https://github.com/hubcarl，这位同学开发了很多基于 egg 和各大前端框架的脚手架
+* https://github.com/eggjs/doctools 文档生成器 for eggjs
+
 #### 附带技术
 * 日志分级并做好存储  
 * 使用 Redis 作为缓存，并进行高并发量进行测试
@@ -21,3 +25,4 @@ mongoRest
   - routes,路由
 
 ```
+
