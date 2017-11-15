@@ -6,6 +6,8 @@
 * jwt
 * RESTful API
 
+后续有迁移到企业级框架 EGG 
+
 ## 花边项目
 * https://github.com/hubcarl，这位同学开发了很多基于 egg 和各大前端框架的脚手架
 * https://github.com/eggjs/doctools 文档生成器 for eggjs
@@ -19,10 +21,6 @@
 
 ## File Structure
 ```
-mongoRest
-  - index， 路由集中生成
-  - actions， Rest 操作处理
-  - routes,路由
-
+TODO
 ```
 
