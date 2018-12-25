@@ -1,6 +1,15 @@
 # project-notes
 > notes for my open source project
 
+## boilerplate
+
+#### [ionic4-boilerplate](https://github.com/pengkobe/ionic4-boilerplate)
+> 一个基于 ionic4，支持自动构建 Android 和 IOS 应用的脚手架
+#### [ionic-boilerplate](https://github.com/pengkobe/ionic-boilerplate)
+> 一个基于 ionic3 开发的脚手架，暂未支持自动构建
+#### [simple-microservice-boilerplate](https://github.com/pengkobe/simple-microservice-boilerplate)
+> 一个简单的微服务脚手架，结合微服务最新的技术与思想进行实践 demo，包括学习笔记
+
 ## tomatobang
 > 个人想着基于此产品面向全端&全栈进行开发, 目前正着手开发 Android 客户端, IOS 开发学习也正在路上. 此外,还立了个 flag. 一年内成为 PS 开发`中`手~
 #### [tomato-website](https://github.com/tomatobang/tomato-site)
@@ -15,6 +24,8 @@
 > tomatobang IOS 客户端,计划使用 swift 语言开发,入门主要参考视频教程
 
 ## Just FE
+#### [ ionic-marquee](https://github.com/pengkobe/ionic-marquee)
+> 一个基于 ionic3 开发的支持 marquee 效果的组件
 #### [web-page-effects](https://github.com/pengkobe/web-page-effects)
 > 展示部分使用 H5 系列技术开发的一些组件效果
 #### [labroom](https://github.com/pengkobe/labroom)
@@ -61,14 +72,16 @@
 
 
 ## Company Related
+#### [cordova-plugin-qiniu](https://github.com/pengkobe/cordova-plugin-qiniu)
+> 七牛云存储 cordova 插件
+#### [nxtpush-cordova-plugin](https://github.com/pengkobe/NXT-Cordova-PushPlugin)
+> 破天荒发布到 npm 的一个组件,没想到社区关注度还是蛮高的,在这里,也第一次对 android 进行了系统的学习
 #### [wechat-file-download-page](https://github.com/pengkobe/wechat-file-download-page)
 > 用于 PDF 预览与下载(仅适用于 微信 webview)，基于 es6-webpack-starter
 #### [ionic1.x-datetime-picker](https://github.com/pengkobe/wechat-file-download-page/ionic1.x-datetime-picker)
 > 插件改良，基于 proton.multi-list-picker
 #### [cordova-plugin-screen-locker](https://github.com/pengkobe/cordova-plugin-screen-locker)
 > 插件改良并重新发布至 npm 官网
-#### [NXT-Cordova-PushPlugin](https://github.com/pengkobe/NXT-Cordova-PushPlugin)
-> 破天荒发布到 npm 的一个组件,没想到社区关注度还是蛮高的,在这里,也第一次对 android 进行了系统的学习
 #### [EFOS-download-page](https://github.com/pengkobe/EFOS-download-page)
 > 这个项目从 0 开始使用 webpack 进行构建. 此外,移动端适配方案使用到了淘宝开发的 flexible.js. 
 #### [html5-2d-editor](https://github.com/pengkobe/html5-2d-editor)
@@ -109,6 +122,10 @@
 > 算法是基础，嗯！立个 Flag
 #### [cSharp-code-snippets](https://github.com/pengkobe/cSharp-code-snippets)
 > 记录之前有用到的一些 C# 代码
+#### [big-data-learning](https://github.com/pengkobe/big-data-learning)
+> 大数据学习笔记
+#### [deep-learning-study](https://github.com/pengkobe/deep-learning-study)
+> 深度学习笔记
 
 ## Tool Related
 #### [my-toolkit](https://github.com/pengkobe/my-toolkit)
